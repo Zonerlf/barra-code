@@ -210,7 +210,7 @@ function printBarcodes() {
                 printWindow.document.write(`
                     <div class="barcode-container">
                         <img src="${barcode.image}" alt="Código de Barras">
-                        <div class="barcode-code" style="">${barcode.date}</div>
+                        <div class="barcode-code" style="font-size: small">${barcode.date}</div>
                     </div>
                 `);
             });
