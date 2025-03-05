@@ -169,7 +169,7 @@ function printBarcodes() {
                         display: grid; 
                         grid-template-columns: repeat(3, 8.2cm); 
                         grid-template-rows: repeat(10, 2.87cm); 
-                        column-gap: 6mm; 
+                        column-gap: 5mm; 
                         row-gap: 2mm;
                         width: 21.59cm;
                         height: 27.94cm;
