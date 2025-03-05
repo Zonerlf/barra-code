@@ -157,6 +157,7 @@ function printBarcodes() {
     if (barcodeData.length > 0) {
         const printWindow = window.open('', '', 'width=800,height=600');
         printWindow.document.write('<html><head><title>Impresión de Códigos de Barras</title>');
+        // Modificador de pagina y contenedor de códigos
         printWindow.document.write(`
             <style>
                 @media print {
