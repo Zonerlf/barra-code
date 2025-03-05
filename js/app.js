@@ -161,6 +161,9 @@ function printBarcodes() {
         printWindow.document.write(`
             <style>
                 @media print {
+                    @page {
+                        margin: 0; /* Aseguramos que no haya margen de la impresora */
+                    }
                     body { font-family: Arial, sans-serif; margin: 0; }
                     .page { 
                         display: grid; 
@@ -168,10 +171,10 @@ function printBarcodes() {
                         grid-template-rows: repeat(10, 2.87cm); 
                         column-gap: 6mm; 
                         row-gap: 2mm;
-                        width: 20.99cm; 
-                        height: 27.64cm;
+                        width: 21.59cm;
+                        height: 27.94cm;
                         page-break-after: always; 
-                        padding: -15mm 3mm; 
+                        padding: 15mm 3mm; 
                         box-sizing: border-box; 
                     }
                     .barcode-container { 
