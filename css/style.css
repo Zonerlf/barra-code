@@ -1,0 +1,89 @@
+/* Estilos generales de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Botones */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo del input de archivo */
+input[type="file"] {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Estilos del contenedor de la tabla con scroll */
+#table-container {
+    max-height: 500px;  /* Ajusta según el tamaño deseado */
+    overflow-y: auto;   /* Permite el desplazamiento vertical */
+    margin-top: 20px;   /* Añade un margen superior */
+}
+
+/* Estilo de la tabla */
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+/* Estilo de las celdas y encabezados */
+#data-table th, #data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+/* Encabezados de la tabla */
+#data-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Estilo para las filas pares e impares */
+#data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#data-table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Estilo para las celdas con QR */
+#data-table td canvas {
+    max-width: 100px;
+    max-height: 100px;
+}

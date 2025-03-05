@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Generator</title>
+
+    <script src="/libs/xlsx.full.min.js"></script>
+    <script src="/libs/html2canvas.min.js"></script>
+    <script src="/libs/JsBarcode.all.min.js"></script>
+    <link href="/libs/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Barcode Generator</h1>
+    
+        <input type="file" id="file-input" class="form-control">
+        <button id="generate-all-codes-btn">Generar Todos los Códigos</button>
+        <button id="export-btn">Exportar a XLS</button>
+        <button id="print-barcode-btn">Imprimir Códigos</button>  
+    
+        <!-- Contenedor para la tabla con scroll -->
+        <div id="table-container">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descripción</th>
+                        <th>Fecha</th>
+                        <th>Factura</th>
+                        <th>OC</th>
+                        <th>Registro</th>
+                        <th>Proveedor</th>
+                        <th>Cliente</th>
+                        <th>Código de Barras</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas generadas por el script -->
+                </tbody>
+            </table>
+        </div>
+    </div>    
+
+    <script src="js/app.js"></script>
+    <script src="/libs/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
