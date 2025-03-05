@@ -182,7 +182,7 @@ function printBarcodes() {
                         flex-direction: column; 
                         justify-content: center; 
                         align-items: center; 
-                        border: 1px solid #ccc; 
+                        border: 0px solid #ccc; 
                         padding: 0; 
                         margin: 2mm; 
                         height: 2.87cm; 
