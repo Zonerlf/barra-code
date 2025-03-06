@@ -75,17 +75,21 @@ function populateTable(data) {
 
 // Función para formatear la fecha en formato dd/mm/yyyy
 function formatDate(date) {
-    // Verificar si la fecha es un número, lo que indica que proviene de Excel
+    const parsedDate = new Date(date);
+    if (!isNaN(parsedDate.getTime())) {
+        // Extraemos el día, mes y año
+        const day = parsedDate.getDate().toString().padStart(2, '0');
+        const month = (parsedDate.getMonth() + 1).toString().padStart(2, '0');
+        const year = parsedDate.getFullYear();
+        return `${day}/${month}/${year}`;
+    }
+
     if (typeof date === 'number') {
         const excelDate = new Date((date - 25569) * 86400 * 1000); // Convertir número de Excel a fecha
         return formatToDDMMYYYY(excelDate);
     }
 
-    const parsedDate = new Date(date);
-    if (isNaN(parsedDate.getTime())) return date;  // Si no es una fecha válida, retornamos tal cual
-
-    // Extraemos el día, mes y año
-    return formatToDDMMYYYY(parsedDate);
+    return date; // Si no es una fecha válida, retornamos tal cual
 }
 
 function formatToDDMMYYYY(parsedDate) {
