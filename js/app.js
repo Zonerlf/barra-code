@@ -161,12 +161,12 @@ function printBarcodes() {
                         display: grid; 
                         grid-template-columns: repeat(3, 7.8cm); 
                         grid-template-rows: repeat(10, 2.87cm); 
-                        column-gap: 6.3mm; 
+                        column-gap: 6mm;
                         row-gap: 0mm;
                         width: 21.59cm;
                         height: 27.94cm;
                         page-break-after: always; 
-                        padding: 15mm 2.7mm; 
+                        padding: 15mm 3mm; 
                         box-sizing: border-box; 
                     }
                     .barcode-container { 
@@ -181,7 +181,7 @@ function printBarcodes() {
                         width: 7.8cm; 
                     }
                     img { 
-                        width: 90%; 
+                        width: 93%; 
                         height: auto; 
                     }
                     .barcode-code { 
