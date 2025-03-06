@@ -75,28 +75,16 @@ function populateTable(data) {
 
 // Función para formatear la fecha en formato dd/mm/yyyy
 function formatDate(date) {
-    const parsedDate = new Date(date);
+    const parsedDate = new Date(Date.UTC(0, 0, date - 1));
     if (!isNaN(parsedDate.getTime())) {
         // Extraemos el día, mes y año
-        const day = parsedDate.getDate().toString().padStart(2, '0');
-        const month = (parsedDate.getMonth() + 1).toString().padStart(2, '0');
-        const year = parsedDate.getFullYear();
+        const day = parsedDate.getUTCDate().toString().padStart(2, '0');
+        const month = (parsedDate.getUTCMonth() + 1).toString().padStart(2, '0');
+        const year = parsedDate.getUTCFullYear();
         return `${day}/${month}/${year}`;
     }
 
-    if (typeof date === 'number') {
-        const excelDate = new Date((date - 25569) * 86400 * 1000); // Convertir número de Excel a fecha
-        return formatToDDMMYYYY(excelDate);
-    }
-
     return date; // Si no es una fecha válida, retornamos tal cual
-}
-
-function formatToDDMMYYYY(parsedDate) {
-    const day = parsedDate.getDate().toString().padStart(2, '0');
-    const month = (parsedDate.getMonth() + 1).toString().padStart(2, '0');
-    const year = parsedDate.getFullYear();
-    return `${day}/${month}/${year}`;
 }
 
 // Generar todos los códigos cuando se hace clic en el botón
